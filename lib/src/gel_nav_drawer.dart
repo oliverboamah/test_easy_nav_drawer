@@ -46,7 +46,7 @@ class GelNavDrawer extends StatefulWidget {
       this.drawerHeaderBackgroundColor = Colors.red,
       this.drawerBodyBackgroundColor = Colors.white,
       this.dividerColor = Colors.grey,
-      this.onMenuItemClicked,
+      @required this.onMenuItemClicked,
       this.onSettingsIconClicked});
 
   @override
@@ -138,7 +138,7 @@ class _GelNavDrawerState extends State<GelNavDrawer> {
           ? this.widget.selectedMenuItemColor
           : this.widget.menuItemColor;
 
-      ListTile(
+      return ListTile(
         title:
             Text(menuItem.title, style: TextStyle(color: currentMenuItemColor)),
         leading: IconButton(

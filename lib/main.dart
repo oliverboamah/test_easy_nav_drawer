@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
     );
   }
 }
- 
+
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
   final String title;
@@ -34,11 +34,12 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       drawer: GelNavDrawer(
-        appLogoAsset: '',
+        appLogoAsset: 'assets/images/logo.png',
         menuItems: [
           GelMenuItem(
               title: 'Home', iconData: Icons.home, showBeforeDivider: true)
         ],
+        onMenuItemClicked: (item) => print(item),
       ),
       body: Center(
         child: Text('Manually Test EasyNavDrawer Package'),
